@@ -1,0 +1,28 @@
+Source: pulseaudio-modules-nemo
+Section: libs
+Priority: required
+Maintainer: Merlijn Wajer <merlijn@wizzup.org>
+Build-Depends: debhelper (>= 10),
+	libpulse-dev,
+	libtool-bin,
+	autoconf,
+	automake,
+	pkg-config
+# TODO: pulsecore
+Standards-Version: 4.3.0
+
+Package: pulseaudio-modules-nemo
+Section: libs
+Priority: required
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Nemo Pulseaudio modules
+ This contains common libs for the Nemo PulseAudio modules.
+
+Package: libmeego-common-dev
+Section: libdevel
+Priority: optional
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Nemo Pulseaudio modules -devel
+ This package contains the development files for the Nemo pulseaudio modules, in particular libmeego-common

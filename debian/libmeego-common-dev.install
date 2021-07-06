@@ -1,0 +1,3 @@
+usr/lib/*/pkgconfig/libmeego-common.pc
+usr/include/pulsecore/modules/meego/*.h
+usr/include/pulsecore/modules/sailfishos/*.h

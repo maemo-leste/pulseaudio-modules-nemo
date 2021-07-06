@@ -46,9 +46,34 @@ else
 endif
 endif
 
+libmeegocommoninclude_HEADERS = include/meego/algorithm-base.h \
+	include/meego/algorithm-hook.h \
+	include/meego/call-state-tracker.h \
+	include/meego/memory.h \
+	include/meego/optimized.h \
+	include/meego/pa-optimized.h \
+	include/meego/parameter-hook.h \
+	include/meego/parameter-hook-implementor.h \
+	include/meego/parameter-modifier.h \
+	include/meego/proplist-meego.h \
+	include/meego/proplist-nemo.h \
+	include/meego/shared-data.h \
+	include/meego/src-16-to-48.h \
+	include/meego/src-48-to-16.h \
+	include/meego/src-48-to-8.h \
+	include/meego/src-8-to-48.h \
+	include/meego/volume-proxy.h
+
+libmeegocommonincludedir = $(includedir)/pulsecore/modules/meego
+
+libmeegocommonincludesf_HEADERS = include/sailfishos/defines.h
+libmeegocommonincludesfdir = $(includedir)/pulsecore/modules/sailfishos
+
 TESTS = check_common
 check_PROGRAMS = check_common
 check_common_SOURCES = tests.c
-check_common_LDADD = libmeego-common.la $(CHECK_LIBS)
+check_common_LDADD = libmeego-common.la $(CHECK_LIBS) $(PULSEAUDIO_LIBS)
 check_common_CFLAGS = $(AM_CFLAGS) $(CHECK_CFLAGS)
 
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA  = libmeego-common.pc

@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+# export DH_VERBOSE=1
+
+# Both the nocheck and shlibdeps come from my current pulseaudio setup, or rather, debian not packaging pulsecore
+# Once we package it ourselves, we do not need this
+DEB_BUILD_OPTIONS=nocheck
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+
+# Pulse installs into /usr/lib/pulse*/
+DEB_CONFIGURE_EXTRA_FLAGS = --with-module-dir=$(shell pkg-config libpulse --variable=modlibexecdir)
+override_dh_auto_configure:
+	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
+
+
+%:
+	dh $@ --with autoreconf

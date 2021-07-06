@@ -14,6 +14,9 @@ noinst_HEADERS = module-meego-voice-symdef.h
 
 modlibexec_LTLIBRARIES = module-meego-voice.la
 
+libmeegocommoninclude_HEADERS = module-voice-api.h
+libmeegocommonincludedir = $(includedir)/pulsecore/modules/meego
+
 module_meego_voice_la_SOURCES =			\
 	module-meego-voice.c			\
 	voice-mainloop-handler.c		\

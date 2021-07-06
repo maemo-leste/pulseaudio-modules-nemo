@@ -8,6 +8,9 @@ AM_LIBADD += $(top_builddir)/src/common/libmeego-common.la
 
 modlibexec_LTLIBRARIES = module-meego-record.la
 
+libmeegocommoninclude_HEADERS = module-record-api.h
+libmeegocommonincludedir = $(includedir)/pulsecore/modules/meego
+
 noinst_HEADERS = module-meego-record-symdef.h
 
 module_meego_record_la_SOURCES = module-meego-record.c

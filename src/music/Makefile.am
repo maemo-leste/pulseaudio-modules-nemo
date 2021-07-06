@@ -7,6 +7,9 @@ AM_CFLAGS =						\
 
 modlibexec_LTLIBRARIES = module-meego-music.la
 
+libmeegocommoninclude_HEADERS = module-music-api.h
+libmeegocommonincludedir = $(includedir)/pulsecore/modules/meego
+
 ###################################
 #              EAP                #
 ###################################
