@@ -12,6 +12,7 @@ Build-Depends: debhelper (>= 10),
 	check,
 	libdbus-1-dev,
 	libasound2-dev,
+	libltdl-dev,
 Standards-Version: 4.3.0
 
 Package: pulseaudio-modules-nemo
