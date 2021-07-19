@@ -9,7 +9,6 @@ Build-Depends: debhelper (>= 10),
 	automake,
 	pkg-config,
 	pulsecore-dev,
-	git,
 Standards-Version: 4.3.0
 
 Package: pulseaudio-modules-nemo
