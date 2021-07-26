@@ -18,6 +18,7 @@ fi
 AC_PROG_CC
 AC_PROG_CC_C99
 AM_PROG_CC_C_O
+AM_PROG_AR
 AC_PROG_GCC_TRADITIONAL
 
 m4_define(pa_major, `echo $VERSION | cut -d. -f1 | cut -d- -f1`)
