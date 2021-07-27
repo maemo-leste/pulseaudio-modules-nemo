@@ -214,7 +214,7 @@ AC_ARG_ENABLE([processing],
 # x86
 AC_MSG_CHECKING([Use x86 libraries])
 case $host_cpu in
-     arm*) x86=no; AC_MSG_RESULT([no]) ;;
+     arm*|aarch*) x86=no; AC_MSG_RESULT([no]) ;;
      *) x86=yes; AC_MSG_RESULT([yes]) ;;
 esac
 AM_CONDITIONAL([X86], [test "x$x86" = xyes])
