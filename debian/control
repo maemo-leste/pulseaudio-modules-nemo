@@ -27,6 +27,6 @@ Package: libmeego-common-dev
 Section: libdevel
 Priority: optional
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, pulseaudio-modules-nemo
 Description: Nemo Pulseaudio modules -devel
  This package contains the development files for the Nemo pulseaudio modules, in particular libmeego-common
