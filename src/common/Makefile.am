@@ -31,21 +31,20 @@ libmeego_common_la_SOURCES += \
 	src-48-to-8.c \
 	src-16-to-48.c \
 	src-48-to-16.c
-else !X86
+else
 libmeego_common_la_LIBADD += \
 	src-8-to-48-neon.o \
 	src-48-to-8-neon.o \
 	src-16-to-48-neon.o \
 	src-48-to-16-neon.o
-endif !X86
-
 if ARM_HARDFP
 %-neon.o: speech_src_neon_hardfp.a
 	ar x speech_src_neon_hardfp.a
-else !ARM_HARDFP
+else
 %-neon.o: speech_src_neon.a
 	ar x speech_src_neon.a
-endif !ARM_HARDFP
+endif
+endif
 
 libmeegocommoninclude_HEADERS = include/meego/algorithm-base.h \
 	include/meego/algorithm-hook.h \
