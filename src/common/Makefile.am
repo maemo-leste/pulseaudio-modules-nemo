@@ -39,22 +39,22 @@ libmeego_common_la_LIBADD += \
 	src-48-to-16-neon.o
 if ARM_HARDFP
 src-48-to-8-neon.o:
-	ar x speech_src_neon_hardfp.a
+	ar x speech_src_neon_hardfp.abc
 src-8-to-48-neon.o:
-	ar x speech_src_neon_hardfp.a
+	ar x speech_src_neon_hardfp.abc
 src-48-to-16-neon.o:
-	ar x speech_src_neon_hardfp.a
+	ar x speech_src_neon_hardfp.abc
 src-16-to-48-neon.o:
-	ar x speech_src_neon_hardfp.a
+	ar x speech_src_neon_hardfp.abc
 else
 src-48-to-8-neon.o:
-	ar x speech_src_neon.a
+	ar x speech_src_neon.abc
 src-8-to-48-neon.o:
-	ar x speech_src_neon.a
+	ar x speech_src_neon.abc
 src-48-to-16-neon.o:
-	ar x speech_src_neon.a
+	ar x speech_src_neon.abc
 src-16-to-48-neon.o:
-	ar x speech_src_neon.a
+	ar x speech_src_neon.abc
 endif
 endif
 
