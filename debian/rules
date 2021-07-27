@@ -12,6 +12,8 @@ DEB_CONFIGURE_EXTRA_FLAGS = --with-module-dir=$(shell pkg-config libpulse --vari
 override_dh_auto_configure:
 	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS)
 
+override_dh_auto_build:
+	make --trace -d -j1
 
 %:
 	dh $@ --with autoreconf
