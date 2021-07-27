@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-# export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 # Both the nocheck and shlibdeps come from my current pulseaudio setup, or rather, debian not packaging pulsecore
 # Once we package it ourselves, we do not need this
